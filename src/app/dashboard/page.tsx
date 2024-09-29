@@ -16,7 +16,7 @@ import { useRouter } from 'next/navigation';
 export default function DashboardPage() {
     const [currentPage, setCurrentPage] = useState(1);
     const [hoveredPokemon, setHoveredPokemon] = useState<Pokemon>();
-    const router=useRouter()
+    const router = useRouter()
     const [isModalOpen, setModalOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [isPaginationLoading, setPaginationLoading] = useState(false);
@@ -25,13 +25,13 @@ export default function DashboardPage() {
     const totalPages = dataPokemon ? Math.ceil(dataPokemon.count / ITEMS_PER_PAGE) : 0;
 
 
-    useEffect(()=>{
-        const {localStorage} =window
-        const item=localStorage.getItem('token')
-        if(!item){
+    useEffect(() => {
+        const { localStorage } = window
+        const item = localStorage.getItem('token')
+        if (!item) {
             router.push('/login')
         }
-    },[])
+    }, [])
 
     useEffect(() => {
         if (error) {
