@@ -36,8 +36,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
                 axios for the comunication with the backend 
 use of custom hooks for the functionalities implementations
 
+
+Implementations 
+
+Get pokemons with all the data paginated by offset and limit 
+search Pokemon by names
  
 
 ````
-
 
