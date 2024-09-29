@@ -28,8 +28,10 @@ export default function MetaLayout({title,children}:Props) {
         // Comprobar la conexión solo en el cliente
         setIsOnline(navigator.onLine);
 
+
         window.addEventListener('online', updateOnlineStatus);
         window.addEventListener('offline', updateOnlineStatus);
+        document.title=title
 
         return () => {
             window.removeEventListener('online', updateOnlineStatus);
@@ -41,6 +43,7 @@ export default function MetaLayout({title,children}:Props) {
     <>
         <Head>
             <title>{title}</title>
+            <meta name="title" content={title} />
             <meta name="description" content="Descubre todo sobre tus Pokémon favoritos, sus habilidades y estadísticas." />
             <meta name="keywords" content="Pokémon, juegos, estadísticas, habilidades" />
             
