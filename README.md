@@ -41,6 +41,8 @@ Implementations
 
 Get pokemons with all the data paginated by offset and limit 
 search Pokemon by names
+Paginations by 20 elements per page 
+
  
 
 ````
